@@ -2,6 +2,8 @@
 
 dokku-maintenance is a plugin for [dokku](https://github.com/progrium/dokku) that gives the ability to enable or disable maintenance mode for an application.
 
+When activated dokku-maintenance show the `maintenance.html` page located in `/var/www/maintenance/{APP_NAME}/`
+
 ## requirements
 
 - dokku 0.4.x+
@@ -11,7 +13,7 @@ dokku-maintenance is a plugin for [dokku](https://github.com/progrium/dokku) tha
 
 ```shell
 # on 0.4.x+
-sudo dokku plugin:install https://github.com/dokku/dokku-maintenance.git maintenance
+sudo dokku plugin:install https://github.com/patrix252/dokku-maintenance.git maintenance
 ```
 
 ## commands
