@@ -158,7 +158,7 @@ cmd-maintenance-enable() {
   fi
 
   cp "$MAINTENANCE_PLUGIN_ROOT/templates/maintenance.conf" "$NGINX_CONF_D"
-  sed -i "s,{APP_ROOT},$DOKKU_ROOT/$APP," "$NGINX_CONF_D/maintenance.conf"
+  sed -i "s,{APP_NAME},$APP," "$NGINX_CONF_D/maintenance.conf"
   validate_nginx "$APP" && restart_nginx "$APP" >/dev/null
   dokku_log_verbose "Done"
 }
